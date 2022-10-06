@@ -57,7 +57,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Dpad",
+                    "name": "Left Dpad",
                     "id": "9e4dee2b-6510-47b7-bafc-9f6bee4863b8",
                     "path": "Dpad",
                     "interactions": "",
@@ -123,15 +123,59 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "188a897e-e6cc-4428-bd99-0dc38e9881b6",
-                    "path": "<Pointer>/delta",
+                    "name": "Right Dpad",
+                    "id": "bc96a149-1951-40b0-9a95-4cf5f0161062",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "ScaleVector2(x=2,y=2)",
                     "groups": "",
                     "action": "look",
-                    "isComposite": false,
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "60ef91e1-2de2-4852-9c73-ed62dab20077",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "look",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "99495db2-a958-440b-8430-7bb51e79f2cd",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "look",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "bfeaacb5-50ae-4b89-abac-78bfa66124c4",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "look",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "d378ff0a-b64e-4bab-b38c-df3c490ffeae",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "look",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
