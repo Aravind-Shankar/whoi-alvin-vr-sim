@@ -19,7 +19,6 @@ public class PlayerControllerStandard : MonoBehaviour
     public void OnLook(InputValue inputValue)
     {
         mLook = inputValue.Get<Vector2>();
-        print($"mLook: {mLook}");
     }
 
     public void Update()

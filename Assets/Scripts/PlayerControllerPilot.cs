@@ -5,34 +5,42 @@ using UnityEngine.InputSystem;
 
 public class PlayerControllerPilot : MonoBehaviour
 {
-    public float moveSpeed;
+    public float moveSpeed = 1f;
+    public float lookSpeed = 1f;
 
     private Vector2 mMove = Vector2.zero;
-    private float mMoveVertical = 0f;
+    private Vector2 mLook = Vector2.zero;
 
-    public void OnMove(InputAction.CallbackContext context)
+    public void OnMove(InputValue inputValue)
     {
-        mMove = context.ReadValue<Vector2>();
+        mMove = inputValue.Get<Vector2>();
     }
 
-    public void OnMoveVertical(InputAction.CallbackContext context)
+    public void OnLook(InputValue inputValue)
     {
-        mMoveVertical = context.ReadValue<float>();
+        mLook = inputValue.Get<Vector2>();
     }
 
     public void Update()
     {
         Move();
+        Look();
     }
 
     private void Move()
     {
-        Vector3 totalMovement = new Vector3(mMove.x, mMoveVertical, mMove.y);
+        Vector3 totalMovement = new Vector3(mMove.x, 0f, mMove.y);
         if (totalMovement.sqrMagnitude < 0.01)
             return;
+        totalMovement = Quaternion.Euler(0, transform.eulerAngles.y, 0) * totalMovement;
         var scaledMoveSpeed = moveSpeed * Time.deltaTime;
-        //var move = Quaternion.Euler(0, transform.eulerAngles.y, 0) * new Vector3(totalMovement.x, 0, totalMovement.y);
-        var move = totalMovement;
-        transform.position += move * scaledMoveSpeed;
+        transform.position += totalMovement * scaledMoveSpeed;
+    }
+
+    private void Look()
+    {
+        var totalRotation = lookSpeed * Time.deltaTime * new Vector3(-mLook.y, mLook.x, 0f);
+        transform.Rotate(Vector3.right, totalRotation.x);
+        transform.Rotate(Vector3.up, totalRotation.y);
     }
 }
