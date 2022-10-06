@@ -11,6 +11,8 @@ public class ControllerManager : MonoBehaviour
 
     private PlayerInput mPlayerInput;
 
+    private Vector3 mOldPosition = Vector3.zero;
+
     private void Start()
     {
         mPCStandard = GetComponent<PlayerControllerStandard>();
@@ -33,6 +35,7 @@ public class ControllerManager : MonoBehaviour
     public void OnExit(InputValue inputValue)
     {
         SwitchController(mPlayerInput.defaultActionMap);
+        transform.position = mOldPosition;
     }
     
     private void SwitchController(string actionMapName)
@@ -65,6 +68,8 @@ public class ControllerManager : MonoBehaviour
         else if (otherObject.CompareTag("Viewport"))
         {
             SwitchController("viewport");
+            mOldPosition = transform.position;
+            transform.position = Vector3.Lerp(transform.position, otherObject.transform.position, 0.9f);
         }
     }
 }
