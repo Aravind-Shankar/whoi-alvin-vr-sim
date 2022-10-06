@@ -64,6 +64,8 @@ public class ControllerManager : MonoBehaviour
         if (otherObject.CompareTag("PilotControls"))
         {
             SwitchController("pilot");
+            mOldPosition = transform.position;
+            transform.position = Vector3.Lerp(transform.position, otherObject.transform.position, 0.7f);
         }
         else if (otherObject.CompareTag("Viewport"))
         {

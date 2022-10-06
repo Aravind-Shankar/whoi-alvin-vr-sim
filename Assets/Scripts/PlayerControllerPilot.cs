@@ -5,15 +5,22 @@ using UnityEngine.InputSystem;
 
 public class PlayerControllerPilot : MonoBehaviour
 {
+    public GameObject alvinObject;
     public float moveSpeed = 1f;
     public float lookSpeed = 1f;
 
-    private Vector2 mMove = Vector2.zero;
+    private Vector2 mAlvinMove = Vector2.zero;
+    private float mAlvinMoveVertical = 0f;
     private Vector2 mLook = Vector2.zero;
 
     public void OnMove(InputValue inputValue)
     {
-        mMove = inputValue.Get<Vector2>();
+        mAlvinMove = inputValue.Get<Vector2>();
+    }
+
+    public void OnMoveVertical(InputValue inputValue)
+    {
+        mAlvinMoveVertical = inputValue.Get<float>();
     }
 
     public void OnLook(InputValue inputValue)
@@ -23,18 +30,21 @@ public class PlayerControllerPilot : MonoBehaviour
 
     public void Update()
     {
-        Move();
+        if (alvinObject == null)
+            return;
+
+        MoveAlvin();
         Look();
     }
 
-    private void Move()
+    private void MoveAlvin()
     {
-        Vector3 totalMovement = new Vector3(mMove.x, 0f, mMove.y);
+        Vector3 totalMovement = new Vector3(mAlvinMove.x, mAlvinMoveVertical, mAlvinMove.y);
         if (totalMovement.sqrMagnitude < 0.01)
             return;
-        totalMovement = Quaternion.Euler(0, transform.eulerAngles.y, 0) * totalMovement;
+        //totalMovement = Quaternion.Euler(0, alvinObject.transform.eulerAngles.y, 0) * totalMovement;
         var scaledMoveSpeed = moveSpeed * Time.deltaTime;
-        transform.position += totalMovement * scaledMoveSpeed;
+        alvinObject.transform.position += totalMovement * scaledMoveSpeed;
     }
 
     private void Look()

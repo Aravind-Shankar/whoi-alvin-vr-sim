@@ -296,15 +296,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "look",
-                    "type": "Value",
-                    "id": "194e7f09-7390-464d-bef6-9b0acc92f2db",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
                     "name": "move",
                     "type": "Value",
                     "id": "50fd2809-3aa3-4a90-988e-1facf6773553",
@@ -321,6 +312,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "look",
+                    "type": "Value",
+                    "id": "194e7f09-7390-464d-bef6-9b0acc92f2db",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -334,6 +334,72 @@
                     "action": "exit",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bbc3e722-2263-4102-b760-89680d87da78",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Right Dpad",
+                    "id": "581c87e0-9f3f-489d-bb96-56baf6d4b23a",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "ScaleVector2(x=2,y=2)",
+                    "groups": "",
+                    "action": "look",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "e04920f5-6b3f-4f55-a66d-aacfb7a5cf31",
+                    "path": "<Keyboard>/i",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "look",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "97fefe88-2572-453d-8a45-602c9445d723",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "look",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "271d2329-e9ea-46ba-acbf-03e994456468",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "look",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "df590195-bd46-4656-97b7-2ba1af1f2253",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "look",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -431,72 +497,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "moveVertical",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "bbc3e722-2263-4102-b760-89680d87da78",
-                    "path": "<Gamepad>/rightStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "look",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "Right Dpad",
-                    "id": "581c87e0-9f3f-489d-bb96-56baf6d4b23a",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "ScaleVector2(x=2,y=2)",
-                    "groups": "",
-                    "action": "look",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "e04920f5-6b3f-4f55-a66d-aacfb7a5cf31",
-                    "path": "<Keyboard>/i",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "97fefe88-2572-453d-8a45-602c9445d723",
-                    "path": "<Keyboard>/k",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "271d2329-e9ea-46ba-acbf-03e994456468",
-                    "path": "<Keyboard>/j",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "look",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "df590195-bd46-4656-97b7-2ba1af1f2253",
-                    "path": "<Keyboard>/l",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "look",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
