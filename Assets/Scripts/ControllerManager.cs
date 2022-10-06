@@ -11,7 +11,7 @@ public class ControllerManager : MonoBehaviour
 
     private PlayerInput mPlayerInput;
 
-    private Vector3 mOldPosition = Vector3.zero;
+    private Vector3 mOldLocalPosition = Vector3.zero;
 
     private void Start()
     {
@@ -35,7 +35,7 @@ public class ControllerManager : MonoBehaviour
     public void OnExit(InputValue inputValue)
     {
         SwitchController(mPlayerInput.defaultActionMap);
-        transform.position = mOldPosition;
+        transform.localPosition = mOldLocalPosition;
     }
     
     private void SwitchController(string actionMapName)
@@ -64,14 +64,14 @@ public class ControllerManager : MonoBehaviour
         if (otherObject.CompareTag("PilotControls"))
         {
             SwitchController("pilot");
-            mOldPosition = transform.position;
+            mOldLocalPosition = transform.localPosition;
             transform.position = Vector3.Lerp(transform.position, otherObject.transform.position, 0.7f);
         }
         else if (otherObject.CompareTag("Viewport"))
         {
             SwitchController("viewport");
-            mOldPosition = transform.position;
-            transform.position = Vector3.Lerp(transform.position, otherObject.transform.position, 0.9f);
+            mOldLocalPosition = transform.localPosition;
+            transform.position = Vector3.Lerp(transform.position, otherObject.transform.position, 0.95f);
         }
     }
 }
