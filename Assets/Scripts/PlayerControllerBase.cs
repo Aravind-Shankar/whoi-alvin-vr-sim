@@ -6,4 +6,5 @@ using UnityEngine.InputSystem;
 public class PlayerControllerBase : MonoBehaviour
 {
     public string inputActionMapName = "";
+    public AlvinController alvinController;
 }

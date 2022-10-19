@@ -5,8 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerControllerPilot : PlayerControllerBase
 {
-    public GameObject alvinObject;
-    public float moveSpeed = 1f;
+    public float alvinMoveSpeed = 1f;
     public float lookSpeed = 1f;
 
     private Vector2 mAlvinMove = Vector2.zero;
@@ -30,7 +29,7 @@ public class PlayerControllerPilot : PlayerControllerBase
 
     public void Update()
     {
-        if (alvinObject == null)
+        if (alvinController == null)
             return;
 
         MoveAlvin();
@@ -43,8 +42,8 @@ public class PlayerControllerPilot : PlayerControllerBase
         if (totalMovement.sqrMagnitude < 0.01)
             return;
         //totalMovement = Quaternion.Euler(0, alvinObject.transform.eulerAngles.y, 0) * totalMovement;
-        var scaledMoveSpeed = moveSpeed * Time.deltaTime;
-        alvinObject.transform.position += totalMovement * scaledMoveSpeed;
+        var scaledMoveSpeed = alvinMoveSpeed * Time.deltaTime;
+        alvinController.transform.position += totalMovement * scaledMoveSpeed;
     }
 
     private void Look()

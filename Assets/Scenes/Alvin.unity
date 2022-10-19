@@ -668,6 +668,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &766354945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766354942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4bae9ca5aa4ad498273b5fbcc28d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &843210245
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +975,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054872163}
   m_LocalRotation: {x: 0.06162845, y: 0.7044161, z: -0.06162845, w: 0.7044161}
-  m_LocalPosition: {x: -1, y: 0.3, z: 0.10000014}
+  m_LocalPosition: {x: -1, y: 0.3, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1491676466}
@@ -1071,6 +1083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputActionMapName: standard
+  alvinController: {fileID: 766354945}
   moveSpeed: 1
   lookSpeed: 10
 --- !u!114 &1054872168
@@ -1098,6 +1111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputActionMapName: viewport
+  alvinController: {fileID: 766354945}
   lookSpeed: 5
 --- !u!114 &1054872170
 MonoBehaviour:
@@ -1112,8 +1126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputActionMapName: pilot
-  alvinObject: {fileID: 766354942}
-  moveSpeed: 10
+  alvinController: {fileID: 766354945}
+  alvinMoveSpeed: 1
   lookSpeed: 10
 --- !u!1001 &1114152990
 PrefabInstance:

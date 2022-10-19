@@ -15,9 +15,13 @@ public class ControllerManager : MonoBehaviour
         foreach (var controller in this.GetComponents<PlayerControllerBase>())
         {
             mPlayerControllers.Add(controller.inputActionMapName, controller);
+            controller.enabled = false;
         }
 
         mPlayerInput = GetComponent<PlayerInput>();
+        if (!mPlayerControllers.ContainsKey(mPlayerInput.defaultActionMap))
+            throw new MissingComponentException($"No controller for default map {mPlayerInput.defaultActionMap}!");
+
         foreach (var map in mPlayerInput.actions.actionMaps)
         {
             if (!mPlayerControllers.ContainsKey(map.name))
@@ -41,26 +45,29 @@ public class ControllerManager : MonoBehaviour
         transform.localPosition = mOldLocalPosition;
     }
     
-    private void SwitchController(string actionMapName)
+    private bool SwitchController(string actionMapName)
     {
+        if (!mPlayerControllers.ContainsKey(actionMapName))
+            return false;
+
         mPlayerInput.SwitchCurrentActionMap(actionMapName);
         foreach (var entry in mPlayerControllers)
         {
             entry.Value.enabled = (entry.Key == actionMapName);
         }
+
+        return true;
     }
 
     private void Interact(GameObject otherObject)
     {
-        if (otherObject.CompareTag("PilotControls"))
+        if (otherObject.CompareTag("PilotControls") && SwitchController("pilot"))
         {
-            SwitchController("pilot");
             mOldLocalPosition = transform.localPosition;
             transform.position = Vector3.Lerp(transform.position, otherObject.transform.position, 0.7f);
         }
-        else if (otherObject.CompareTag("Viewport"))
+        else if (otherObject.CompareTag("Viewport") && SwitchController("viewport"))
         {
-            SwitchController("viewport");
             mOldLocalPosition = transform.localPosition;
             transform.position = Vector3.Lerp(transform.position, otherObject.transform.position, 0.95f);
         }
