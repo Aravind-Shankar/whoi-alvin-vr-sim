@@ -3,23 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(PlayerControllerBase))]
 public class ControllerManager : MonoBehaviour
 {
-    private PlayerControllerStandard mPCStandard;
-    private PlayerControllerPilot mPCPilot;
-    private PlayerControllerViewport mPCViewport;
-
+    private Dictionary<string, PlayerControllerBase> mPlayerControllers = new Dictionary<string, PlayerControllerBase>();
     private PlayerInput mPlayerInput;
-
     private Vector3 mOldLocalPosition = Vector3.zero;
 
     private void Start()
     {
-        mPCStandard = GetComponent<PlayerControllerStandard>();
-        mPCPilot = GetComponent<PlayerControllerPilot>();
-        mPCViewport = GetComponent<PlayerControllerViewport>();
+        foreach (var controller in this.GetComponents<PlayerControllerBase>())
+        {
+            mPlayerControllers.Add(controller.inputActionMapName, controller);
+        }
 
         mPlayerInput = GetComponent<PlayerInput>();
+        foreach (var map in mPlayerInput.actions.actionMaps)
+        {
+            if (!mPlayerControllers.ContainsKey(map.name))
+                Debug.LogWarning($"No corresponding controller found for action map: {map.name}. Ignore if unnecessary.");
+        }
         SwitchController(mPlayerInput.defaultActionMap);
     }
 
@@ -41,21 +44,9 @@ public class ControllerManager : MonoBehaviour
     private void SwitchController(string actionMapName)
     {
         mPlayerInput.SwitchCurrentActionMap(actionMapName);
-
-        mPCStandard.enabled = false;
-        mPCPilot.enabled = false;
-        mPCViewport.enabled = false;
-        switch (actionMapName)
+        foreach (var entry in mPlayerControllers)
         {
-            case "standard":
-                mPCStandard.enabled = true;
-                break;
-            case "pilot":
-                mPCPilot.enabled = true;
-                break;
-            case "viewport":
-                mPCViewport.enabled = true;
-                break;
+            entry.Value.enabled = (entry.Key == actionMapName);
         }
     }
 

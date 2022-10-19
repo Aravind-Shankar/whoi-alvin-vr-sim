@@ -1070,6 +1070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb4bd66c08cbfd409fc88b318b7ce22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputActionMapName: standard
   moveSpeed: 1
   lookSpeed: 10
 --- !u!114 &1054872168
@@ -1096,6 +1097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 533ae297d66b77b4b8778161d97dcd09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputActionMapName: viewport
   lookSpeed: 5
 --- !u!114 &1054872170
 MonoBehaviour:
@@ -1109,6 +1111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 005be710d9bb41e4386fb7ead72b4c65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputActionMapName: pilot
   alvinObject: {fileID: 766354942}
   moveSpeed: 10
   lookSpeed: 10

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerControllerStandard : MonoBehaviour
+public class PlayerControllerStandard : PlayerControllerBase
 {
     public float moveSpeed = 1f;
     public float lookSpeed = 1f;

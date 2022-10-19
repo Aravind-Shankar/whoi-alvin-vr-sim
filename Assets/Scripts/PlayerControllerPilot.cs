@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerControllerPilot : MonoBehaviour
+public class PlayerControllerPilot : PlayerControllerBase
 {
     public GameObject alvinObject;
     public float moveSpeed = 1f;
