@@ -1400,10 +1400,10 @@ MonoBehaviour:
   totalMass: 22767.229
   dimensions: {x: 16.351492, y: 13.75586, z: 84.34974}
   useDefaultCenterOfMass: 0
-  centerOfMass: {x: 0.09923077, y: -0.1488409, z: 0.46673584}
-  centerOfMassOffset: {x: 0, y: 0, z: 0}
+  centerOfMass: {x: 0.09923077, y: -3.848841, z: 0.46673584}
+  centerOfMassOffset: {x: 0, y: -3.7, z: 0}
   useDefaultInertia: 1
-  inertiaTensor: {x: 144839.16, y: 144839.17, z: 144838.95}
+  inertiaTensor: {x: 456522.5, y: 144839.12, z: 456522.3}
   inertiaScale: {x: 1, y: 1, z: 1}
   updateInterval: 1
 --- !u!114 &1173653862
@@ -1451,13 +1451,13 @@ MonoBehaviour:
   engines: []
   rudders: []
   thrusters: []
-  dropAnchorWhenInactive: 1
-  weighAnchorWhenActive: 1
-  stabilizeRoll: 0
-  stabilizePitch: 0
+  dropAnchorWhenInactive: 0
+  weighAnchorWhenActive: 0
+  stabilizeRoll: 1
+  stabilizePitch: 1
   maxStabilizationTorqueAngle: 20
   rollStabilizationMaxTorque: 3000
-  pitchStabilizationMaxTorque: 0
+  pitchStabilizationMaxTorque: 3000
   onShipInitialized:
     m_PersistentCalls:
       m_Calls: []
@@ -1468,7 +1468,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173653858}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af2bc5d8f141b104a9901ec12c3b4527, type: 3}
   m_Name: 
@@ -3400,8 +3400,8 @@ MonoBehaviour:
   defaultWaterNormal: {x: 0, y: 1, z: 0}
   defaultWaterFlow: {x: 0, y: 0, z: 0}
   calculateWaterHeights: 1
-  calculateWaterNormals: 1
-  calculateWaterFlows: 1
+  calculateWaterNormals: 0
+  calculateWaterFlows: 0
   fluidDensity: 1030
   buoyantForceCoefficient: 1
   slamForceCoefficient: 1
