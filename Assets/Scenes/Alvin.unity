@@ -1341,6 +1341,7 @@ GameObject:
   - component: {fileID: 1173653861}
   - component: {fileID: 1173653863}
   - component: {fileID: 1173653862}
+  - component: {fileID: 1173653864}
   m_Layer: 0
   m_Name: AlvinInterior
   m_TagString: Untagged
@@ -1478,6 +1479,29 @@ MonoBehaviour:
   zeroForceRadius: 2
   dragForce: 500
   localAnchorPoint: {x: 0, y: 0, z: 0}
+--- !u!114 &1173653864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173653858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650b989314dc40a43920bb30fe33a700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ReferenceWaterObject: {fileID: 0}
+  requestedDepth: 0
+  depthInputSensitivity: 10
+  depthPID_Kp: 3
+  depthPID_Ki: 0.3
+  depthPID_Kd: 0.05
+  maxMassFactor: 5
+  keepHorizontal: 1
+  keepHorizontalSensitivity: 1
+  maxMassOffset: 1
+  depthInput: 0
 --- !u!1 &1242858774
 GameObject:
   m_ObjectHideFlags: 0
