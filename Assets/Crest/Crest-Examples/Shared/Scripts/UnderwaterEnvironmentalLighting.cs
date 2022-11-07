@@ -27,7 +27,7 @@ namespace Crest
         int _version = 0;
 #pragma warning restore 414
 
-        [Tooltip("How much this effect applies. Values less than 1 attenuate light less underwater. Value of 1 is physically based."), SerializeField, Range(0f, 3f)]
+        [Tooltip("How much this effect applies. Values less than 1 attenuate light less underwater. Value of 1 is physically based."), SerializeField, Range(0f, 10f)]
         float _weight = 1f;
 
         Light _primaryLight;
