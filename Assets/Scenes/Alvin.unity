@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _version: 0
-  _globalWindSpeed: 10
+  _globalWindSpeed: 5
   _viewpoint: {fileID: 0}
   _camera: {fileID: 0}
   _teleportThreshold: 10
@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ReferenceWaterObject: {fileID: 0}
   requestedDepth: 10
-  depthInputSensitivity: 2
+  depthInputSensitivity: 5
   depthPID_Kp: 3
   depthPID_Ki: 0.3
   depthPID_Kd: 0.05
@@ -2211,7 +2211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _version: 0
-  _weight: 0.17
+  _weight: 2
 --- !u!114 &1491676468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2228,10 +2228,10 @@ MonoBehaviour:
   _mode: 0
   _filterOceanData: 13
   _meniscus: 1
-  _depthFogDensityFactor: 0.01
+  _depthFogDensityFactor: 0.03
   _volumeGeometry: {fileID: 0}
   _invertCulling: 0
-  _enableShaderAPI: 0
+  _enableShaderAPI: 1
   _copyOceanMaterialParamsEachFrame: 1
   _farPlaneMultiplier: 0.68
   _debug:
