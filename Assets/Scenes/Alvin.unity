@@ -1112,7 +1112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844652368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.91, y: -3.35, z: 0}
+  m_LocalPosition: {x: -1.91, y: -3.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 296096279}
@@ -1587,7 +1587,7 @@ MonoBehaviour:
     startingRPM: 300
     startDuration: 1.1
     stopDuration: 0.5
-    thrustPosition: {x: -2, y: 0, z: 0}
+    thrustPosition: {x: 0, y: 0, z: 0}
     thrustDirection: {x: 0, y: 0, z: 1}
     applyThrustWhenAboveWater: 0
     reverseThrustCoefficient: 1
@@ -1647,7 +1647,7 @@ MonoBehaviour:
     startingRPM: 300
     startDuration: 1.1
     stopDuration: 0.5
-    thrustPosition: {x: 2, y: 0, z: 0}
+    thrustPosition: {x: 0, y: 0, z: 0}
     thrustDirection: {x: 0, y: 0, z: 1}
     applyThrustWhenAboveWater: 0
     reverseThrustCoefficient: 1
@@ -1713,8 +1713,8 @@ MonoBehaviour:
   stabilizeRoll: 1
   stabilizePitch: 1
   maxStabilizationTorqueAngle: 20
-  rollStabilizationMaxTorque: 3000000
-  pitchStabilizationMaxTorque: 3000000
+  rollStabilizationMaxTorque: 100000000
+  pitchStabilizationMaxTorque: 100000000
   onShipInitialized:
     m_PersistentCalls:
       m_Calls: []
@@ -1755,8 +1755,8 @@ MonoBehaviour:
   depthPID_Kd: 0.05
   maxMassFactor: 3
   keepHorizontal: 1
-  keepHorizontalSensitivity: 0.1
-  maxMassOffset: 0.5
+  keepHorizontalSensitivity: 1
+  maxMassOffset: 1
   depthInput: 0
 --- !u!1 &1242858774
 GameObject:
@@ -2228,7 +2228,7 @@ MonoBehaviour:
   _mode: 0
   _filterOceanData: 13
   _meniscus: 1
-  _depthFogDensityFactor: 0.602
+  _depthFogDensityFactor: 0.01
   _volumeGeometry: {fileID: 0}
   _invertCulling: 0
   _enableShaderAPI: 0
@@ -2834,7 +2834,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824343515}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.91, y: -3.35, z: 0}
+  m_LocalPosition: {x: 1.91, y: -3.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 296096279}
