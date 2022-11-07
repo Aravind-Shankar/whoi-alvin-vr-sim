@@ -194,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15812958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -514, y: -10, z: -507}
+  m_LocalPosition: {x: -514, y: -127, z: -507}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 282469359}
@@ -352,7 +352,7 @@ MonoBehaviour:
   _simSettingsFlow: {fileID: 0}
   _createShadowData: 0
   _simSettingsShadow: {fileID: 0}
-  _createClipSurfaceData: 0
+  _createClipSurfaceData: 1
   _simSettingsClipSurface: {fileID: 0}
   _defaultClippingState: 0
   _createAlbedoData: 0
@@ -1056,6 +1056,68 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &982249571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 982249572}
+  - component: {fileID: 982249574}
+  - component: {fileID: 982249573}
+  m_Layer: 0
+  m_Name: ClipInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &982249572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982249571}
+  m_LocalRotation: {x: -0.08715579, y: -0, z: -0, w: 0.9961947}
+  m_LocalPosition: {x: 0.19, y: -0.11, z: 1.53}
+  m_LocalScale: {x: 9.371135, y: 8.56946, z: 11.427435}
+  m_Children: []
+  m_Father: {fileID: 1491676466}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &982249573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982249571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdff4e1b753d044b5a7dcf91a7e7b863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _checkShaderName: 1
+  _checkShaderPasses: 1
+  _disableRenderer: 1
+  _version: 1
+  _mode: 1
+  _primitive: 3
+  _order: 0
+  _inverted: 0
+  _disableClipSurfaceWhenTooFarFromSurface: 0
+  _animatedWavesDisplacementSamplingIterations: 4
+--- !u!33 &982249574
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982249571}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1045473474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,9 +1419,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173653858}
   serializedVersion: 2
-  m_Mass: 22767.229
-  m_Drag: 1
-  m_AngularDrag: 1
+  m_Mass: 100000
+  m_Drag: 0.15
+  m_AngularDrag: 0.45
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1397,14 +1459,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818177d2061f4558b66bee63b4cc78f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseMass: 22767.229
-  totalMass: 22767.229
+  baseMass: 100000
+  totalMass: 100000
   dimensions: {x: 16.351492, y: 13.75586, z: 84.34974}
   useDefaultCenterOfMass: 0
   centerOfMass: {x: 0.09923077, y: -3.848841, z: 0.46673584}
   centerOfMassOffset: {x: 0, y: -3.7, z: 0}
   useDefaultInertia: 1
-  inertiaTensor: {x: 456522.5, y: 144839.12, z: 456522.3}
+  inertiaTensor: {x: 2005173.9, y: 636173.7, z: 2005172.9}
   inertiaScale: {x: 1, y: 1, z: 1}
   updateInterval: 1
 --- !u!114 &1173653862
@@ -1457,8 +1519,8 @@ MonoBehaviour:
   stabilizeRoll: 1
   stabilizePitch: 1
   maxStabilizationTorqueAngle: 20
-  rollStabilizationMaxTorque: 3000
-  pitchStabilizationMaxTorque: 3000
+  rollStabilizationMaxTorque: 300000
+  pitchStabilizationMaxTorque: 300000
   onShipInitialized:
     m_PersistentCalls:
       m_Calls: []
@@ -1492,14 +1554,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ReferenceWaterObject: {fileID: 0}
-  requestedDepth: 0
+  requestedDepth: 10
   depthInputSensitivity: 10
   depthPID_Kp: 3
   depthPID_Ki: 0.3
   depthPID_Kd: 0.05
-  maxMassFactor: 5
+  maxMassFactor: 3
   keepHorizontal: 1
-  keepHorizontalSensitivity: 1
+  keepHorizontalSensitivity: 0.1
   maxMassOffset: 1
   depthInput: 0
 --- !u!1 &1242858774
@@ -1938,7 +2000,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 982249572}
   m_Father: {fileID: 1054872164}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3397,7 +3460,6 @@ GameObject:
   - component: {fileID: 3761261396171185031}
   - component: {fileID: 773919324191758529}
   - component: {fileID: 1600695803}
-  - component: {fileID: 5851994457618108431}
   - component: {fileID: 5851994457618108430}
   m_Layer: 0
   m_Name: Main sphere
@@ -3517,19 +3579,6 @@ MonoBehaviour:
   triangleCount: 0
   vertexCount: 0
   targetRigidbody: {fileID: 1173653859}
---- !u!114 &5851994457618108431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5851994457618108429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2852e0c84cd9f584e88b969fe15d5e83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  addWaterParticleSystem: 1
 --- !u!1 &6089336910083636520
 GameObject:
   m_ObjectHideFlags: 0
