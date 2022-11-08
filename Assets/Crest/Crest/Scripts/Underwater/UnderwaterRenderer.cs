@@ -90,6 +90,13 @@ namespace Crest
 
                 return 1f;
             }
+            set
+            {
+                if (Instance != null)
+                {
+                    Instance._depthFogDensityFactor = value;
+                }
+            }
         }
 
 

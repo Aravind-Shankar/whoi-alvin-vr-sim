@@ -30,11 +30,15 @@ namespace Crest
         [Tooltip("How much this effect applies. Values less than 1 attenuate light less underwater. Value of 1 is physically based."), SerializeField, Range(0f, 10f)]
         float _weight = 1f;
 
+        [Tooltip("How much to scale this effect for the depth fog factor alone (for better control over the visuals)."), SerializeField, Range(0.5f, 2.5f)]
+        float _depthFogFactorScale = 1f;
+
         Light _primaryLight;
         float _lightIntensity;
         float _ambientIntensity;
         float _reflectionIntensity;
         float _fogDensity;
+        float _underwaterDepthFogDensityFactor;
 
         float _averageDensity = 0f;
 
@@ -67,6 +71,7 @@ namespace Crest
             _ambientIntensity = RenderSettings.ambientIntensity;
             _reflectionIntensity = RenderSettings.reflectionIntensity;
             _fogDensity = RenderSettings.fogDensity;
+            _underwaterDepthFogDensityFactor = UnderwaterRenderer.DepthFogDensityFactor;
 
             var density = OceanRenderer.Instance.UnderwaterDepthFogDensity;
             _averageDensity = (density.x + density.y + density.z) / 3f;
@@ -89,6 +94,7 @@ namespace Crest
             RenderSettings.ambientIntensity = _ambientIntensity;
             RenderSettings.reflectionIntensity = _reflectionIntensity;
             RenderSettings.fogDensity = _fogDensity;
+            UnderwaterRenderer.DepthFogDensityFactor = _underwaterDepthFogDensityFactor;
 
             _isInitialised = false;
         }
@@ -115,6 +121,7 @@ namespace Crest
             RenderSettings.ambientIntensity = Mathf.Lerp(0, _ambientIntensity, depthMultiplier);
             RenderSettings.reflectionIntensity = Mathf.Lerp(0, _reflectionIntensity, depthMultiplier);
             RenderSettings.fogDensity = Mathf.Lerp(0, _fogDensity, depthMultiplier);
+            UnderwaterRenderer.DepthFogDensityFactor = Mathf.Lerp(_underwaterDepthFogDensityFactor, 0.01f, depthMultiplier / _depthFogFactorScale);
         }
     }
 

@@ -451,8 +451,8 @@ Camera:
     y: 0.1
     width: 0.8
     height: 0.8
-  near clip plane: 0.3
-  far clip plane: 1000
+  near clip plane: 1
+  far clip plane: 600
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -2018,7 +2018,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.5
+  m_Intensity: 1.3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2211,7 +2211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _version: 0
-  _weight: 2
+  _weight: 1.2
+  _depthFogFactorScale: 1.5
 --- !u!114 &1491676468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2228,7 +2229,7 @@ MonoBehaviour:
   _mode: 0
   _filterOceanData: 13
   _meniscus: 1
-  _depthFogDensityFactor: 0.03
+  _depthFogDensityFactor: 0.2
   _volumeGeometry: {fileID: 0}
   _invertCulling: 0
   _enableShaderAPI: 1
