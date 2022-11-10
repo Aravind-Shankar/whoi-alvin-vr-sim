@@ -46,6 +46,11 @@ namespace NWH.DWP2.WaterObjects
             drawer.Field("maxSpeed", true, "m/s");
             drawer.Field("thrustCurve");
             drawer.Field("rudderTransform");
+            if (drawer.Button("Set Thrust Position From Rudder"))
+            {
+                Engine e = SerializedPropertyHelper.GetTargetObjectOfProperty(property) as Engine;
+                e.thrustPosition = e.rudderTransform.localPosition;
+            }
             drawer.EndSubsection();
 
             drawer.BeginSubsection("Animation");
