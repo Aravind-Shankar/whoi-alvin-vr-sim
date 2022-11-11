@@ -33,6 +33,13 @@ namespace Crest
         [Tooltip("How much to scale this effect for the depth fog factor alone (for better control over the visuals)."), SerializeField, Range(0.5f, 2.5f)]
         float _depthFogFactorScale = 1f;
 
+        [Tooltip("Seafloor object transform (to get max depth from)"), SerializeField]
+        Transform _seafloorTransform;
+
+        [Tooltip("Curve for falloff of primary light intensity only; depth range 0 to the seafloor depth"), SerializeField]
+        AnimationCurve _primaryLightIntensityFalloff = AnimationCurve.EaseInOut(0f,1f, 1f,0f);
+
+
         Light _primaryLight;
         float _lightIntensity;
         float _ambientIntensity;
@@ -113,15 +120,29 @@ namespace Crest
                 Mathf.Min(OceanRenderer.Instance.ViewerHeightAboveWater * DEPTH_OUTSCATTER_CONSTANT, 0f) *
                 _weight);
 
+            float curvePosition = Mathf.Clamp01(OceanRenderer.Instance.ViewerHeightAboveWater / _seafloorTransform.position.y);
+            float curveValue = Mathf.Clamp01(_primaryLightIntensityFalloff.Evaluate(curvePosition));
+
             // Darken environmental lighting when viewer underwater
             if (_primaryLight)
             {
-                _primaryLight.intensity = Mathf.Lerp(0, _lightIntensity, depthMultiplier);
+                // ORIGINAL: use the depth multiplier as-is
+                // _primaryLight.intensity = Mathf.Lerp(0, _lightIntensity, depthMultiplier);
+
+                // CURVE-BASED: use a standard lerp
+                // (both the viewer height and the seafloor position y-coord are assumed negative in this range)
+                _primaryLight.intensity = curveValue * _lightIntensity;
             }
-            RenderSettings.ambientIntensity = Mathf.Lerp(0, _ambientIntensity, depthMultiplier);
-            RenderSettings.reflectionIntensity = Mathf.Lerp(0, _reflectionIntensity, depthMultiplier);
-            RenderSettings.fogDensity = Mathf.Lerp(0, _fogDensity, depthMultiplier);
-            UnderwaterRenderer.DepthFogDensityFactor = Mathf.Lerp(_underwaterDepthFogDensityFactor, 0.01f, depthMultiplier / _depthFogFactorScale);
+            //RenderSettings.ambientIntensity = Mathf.Lerp(0, _ambientIntensity, depthMultiplier);
+            //RenderSettings.reflectionIntensity = Mathf.Lerp(0, _reflectionIntensity, depthMultiplier);
+            //RenderSettings.fogDensity = Mathf.Lerp(0, _fogDensity, depthMultiplier);
+
+            RenderSettings.ambientIntensity = curveValue * _ambientIntensity;
+            RenderSettings.reflectionIntensity = curveValue * _reflectionIntensity;
+            RenderSettings.fogDensity = curveValue * _fogDensity;
+
+            // UnderwaterRenderer.DepthFogDensityFactor = Mathf.Lerp(_underwaterDepthFogDensityFactor, 0.01f, depthMultiplier / _depthFogFactorScale);
+            UnderwaterRenderer.DepthFogDensityFactor = Mathf.Lerp(_underwaterDepthFogDensityFactor, 0.01f, curveValue);
         }
     }
 
