@@ -11,7 +11,8 @@
                     "id": "4c14d84a-48f6-429e-9111-d009cff86527",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Throttle",
@@ -19,7 +20,8 @@
                     "id": "067e3728-8c0e-4c68-8b07-765ef5a0b2ff",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Throttle2",
@@ -27,7 +29,8 @@
                     "id": "ec48226f-41c5-4f41-addf-d89dc4fe9489",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Throttle3",
@@ -35,7 +38,8 @@
                     "id": "adb1ee87-c871-44cb-9536-be9a29269bd3",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Throttle4",
@@ -43,7 +47,8 @@
                     "id": "09912318-ce4d-4f0b-8336-e581f237a903",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "BowThruster",
@@ -51,7 +56,8 @@
                     "id": "a09cdc8f-5c97-4068-8e2c-f72377d022f2",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "SternThruster",
@@ -59,7 +65,8 @@
                     "id": "61f34607-04fc-4263-b801-6bb95dda9649",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "SubmarineDepth",
@@ -67,7 +74,8 @@
                     "id": "c2a3958c-d006-4c67-8425-3635c0303de7",
                     "expectedControlType": "Axis",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "EngineStartStop",
@@ -75,7 +83,8 @@
                     "id": "83764afd-1cc4-4537-9658-82bb7f635f32",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Anchor",
@@ -83,7 +92,8 @@
                     "id": "0050fc1b-a233-4284-b206-2e5254c3fc79",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -321,7 +331,7 @@
                 {
                     "name": "Negative",
                     "id": "92ec8857-35e5-49fd-9008-80f3f4a5704b",
-                    "path": "<Keyboard>/k",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -332,7 +342,7 @@
                 {
                     "name": "Positive",
                     "id": "511c38f0-ff55-41b6-b29c-968ae5d0bdca",
-                    "path": "<Keyboard>/i",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
