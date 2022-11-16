@@ -300,7 +300,7 @@ namespace NWH.DWP2.ShipController
                 {
                     ""name"": ""Negative"",
                     ""id"": ""1d34dc63-cb94-4628-8a5d-f1b5b5c553de"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -311,7 +311,7 @@ namespace NWH.DWP2.ShipController
                 {
                     ""name"": ""Positive"",
                     ""id"": ""7d4e3e8a-9ffe-40e0-b96e-b7b1f94a90cb"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/i"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -355,7 +355,7 @@ namespace NWH.DWP2.ShipController
                 {
                     ""name"": ""Negative"",
                     ""id"": ""92ec8857-35e5-49fd-9008-80f3f4a5704b"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -366,7 +366,7 @@ namespace NWH.DWP2.ShipController
                 {
                     ""name"": ""Positive"",
                     ""id"": ""511c38f0-ff55-41b6-b29c-968ae5d0bdca"",
-                    ""path"": ""<Keyboard>/r"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
