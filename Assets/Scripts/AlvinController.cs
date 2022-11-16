@@ -13,6 +13,7 @@ public class AlvinController : MonoBehaviour
     }
 
     public ComponentToggle<Light>[] lightToggles;
+    public ComponentToggle<VehicleCamera>[] vehicleCameraToggles;
 
     private void Update()
     {
@@ -20,6 +21,12 @@ public class AlvinController : MonoBehaviour
         {
             if (Input.GetKeyUp(lightToggle.toggleKey))
                 ToggleLight(lightToggle.component);
+        }
+
+        foreach (var cameraToggle in vehicleCameraToggles)
+        {
+            if (Input.GetKeyUp(cameraToggle.toggleKey))
+                cameraToggle.component.Toggle();
         }
     }
 
