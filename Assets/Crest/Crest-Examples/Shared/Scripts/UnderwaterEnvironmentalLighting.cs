@@ -142,7 +142,7 @@ namespace Crest
             RenderSettings.fogDensity = curveValue * _fogDensity;
 
             // UnderwaterRenderer.DepthFogDensityFactor = Mathf.Lerp(_underwaterDepthFogDensityFactor, 0.01f, depthMultiplier / _depthFogFactorScale);
-            UnderwaterRenderer.DepthFogDensityFactor = Mathf.Lerp(_underwaterDepthFogDensityFactor, 0.01f, curveValue);
+            UnderwaterRenderer.DepthFogDensityFactor = Mathf.Lerp(_underwaterDepthFogDensityFactor, 0.01f, curveValue / _depthFogFactorScale);
         }
     }
 

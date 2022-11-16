@@ -1248,7 +1248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _version: 0
   _weight: 1.2
-  _depthFogFactorScale: 1.5
+  _depthFogFactorScale: 1.1
   _seafloorTransform: {fileID: 0}
   _primaryLightIntensityFalloff:
     serializedVersion: 2
@@ -1262,6 +1262,24 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
+    - serializedVersion: 3
+      time: 0.38113916
+      value: 0.74491024
+      inSlope: -2.0017421
+      outSlope: -2.0017421
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.1210371
+    - serializedVersion: 3
+      time: 0.7435144
+      value: 0.056102604
+      inSlope: -0.51559144
+      outSlope: -0.51559144
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.48802382
+      outWeight: 0.36643603
     - serializedVersion: 3
       time: 1
       value: 0
