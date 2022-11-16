@@ -2902,7 +2902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ReferenceWaterObject: {fileID: 0}
-  requestedDepth: 30
+  requestedDepth: 10
   depthInputSensitivity: 5
   depthPID_Kp: 3
   depthPID_Ki: 0.3
@@ -2910,7 +2910,7 @@ MonoBehaviour:
   maxMassFactor: 3
   keepHorizontal: 1
   keepHorizontalSensitivity: 1
-  maxMassOffset: 1
+  maxMassOffset: 0.4
   depthInput: 0
 --- !u!114 &573129737
 MonoBehaviour:
