@@ -2620,6 +2620,7 @@ GameObject:
   - component: {fileID: 573129732}
   - component: {fileID: 573129733}
   - component: {fileID: 573129737}
+  - component: {fileID: 1858737948786554395}
   m_Layer: 0
   m_Name: Alvin
   m_TagString: Untagged
@@ -2924,6 +2925,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52b52ef952dc2147bf915776311b00b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1858737948786554395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5815597120168924071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4bae9ca5aa4ad498273b5fbcc28d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightToggles:
+  - component: {fileID: 1506869204}
+    toggleKey: 122
 --- !u!1 &5851994457618108429
 GameObject:
   m_ObjectHideFlags: 0

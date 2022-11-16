@@ -1,24 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-[RequireComponent(typeof(Rigidbody))]
 public class AlvinController : MonoBehaviour
 {
-    private Rigidbody mRigidbody;
-
-    private void Awake()
+    [System.Serializable]
+    public struct ComponentToggle<T>
     {
-        mRigidbody = GetComponent<Rigidbody>();
+        public T component;
+        public KeyCode toggleKey;
     }
 
-    private void FixedUpdate()
+    public ComponentToggle<Light>[] lightToggles;
+
+    private void Update()
     {
-        AddHoveringForce();
+        foreach (var lightToggle in lightToggles)
+        {
+            if (Input.GetKeyUp(lightToggle.toggleKey))
+                ToggleLight(lightToggle.component);
+        }
     }
 
-    private void AddHoveringForce()
+    private void ToggleLight(Light light)
     {
-        mRigidbody.AddForce(-mRigidbody.mass * Physics.gravity);
+        light.enabled = !light.enabled;
     }
 }
