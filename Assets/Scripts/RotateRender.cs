@@ -19,8 +19,19 @@ public class RotateRender : MonoBehaviour
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
+        ApplyRotation(source, destination);
+    }
+
+    public void ApplyRotation(RenderTexture source, RenderTexture destination, bool flip = false)
+    {
         rotateRenderMaterial.SetVector("_ViewportRect", mViewportVector);   // set every time to support edit mode too
 
         Graphics.Blit(source, destination, rotateRenderMaterial);
+        if (flip)
+        {
+            // 180-degree flipping necessary to save renders to file but not in material, for some reason
+            Graphics.Blit(destination, source, rotateRenderMaterial);
+            Graphics.Blit(source, destination, rotateRenderMaterial);
+        }
     }
 }

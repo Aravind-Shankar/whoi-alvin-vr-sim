@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-[RequireComponent(typeof(Camera))]
+[RequireComponent(typeof(Camera), typeof(RotateRender))]
 public class VehicleCamera : MonoBehaviour
 {
     public string outputFolder;
@@ -12,6 +12,7 @@ public class VehicleCamera : MonoBehaviour
     public TogglingAttributes onStateAttributes;
 
     private Camera _camera;
+    private RotateRender _rotateRender;
     private bool _active;
     public bool Active
     {
@@ -23,6 +24,7 @@ public class VehicleCamera : MonoBehaviour
     private void Start()
     {
         _camera = GetComponent<Camera>();
+        _rotateRender = GetComponent<RotateRender>();
         onStateAttributes.ReadFromCamera(_camera);
         Active = true;
     }
@@ -37,26 +39,42 @@ public class VehicleCamera : MonoBehaviour
         Active = !Active;
     }
 
+    private void SaveRenderToFile(RenderTexture renderTexture)
+    {
+        Rect targetTextureRect = new Rect(0, 0, renderTexture.width, renderTexture.height);
+
+        Texture2D photo = new Texture2D(
+            (int)targetTextureRect.width, (int)targetTextureRect.height,
+            TextureFormat.RGBA32, false);
+        photo.ReadPixels(targetTextureRect, 0, 0);
+
+        string dateTimeString = System.DateTime.Now.ToString("yyyy-MM-dd_T_HH-mm-ss");
+        string outputFileName = $"{dateTimeString}_{gameObject.name}.png";
+        string outputFilePath = Path.Combine(outputFolder, outputFileName);
+
+        Debug.Log($"Saving photo at: {outputFilePath}");
+        File.WriteAllBytes(outputFilePath, photo.EncodeToPNG());
+
+        DestroyImmediate(photo);
+    }
+
     public void TakePhoto()
     {
         var oldActiveTexture = RenderTexture.active;
         RenderTexture.active = _camera.targetTexture;
         _camera.Render();
 
-        Rect targetTextureRect = new Rect(0, 0, _camera.targetTexture.width, _camera.targetTexture.height);
+        RenderTexture outputRT = new RenderTexture(_camera.targetTexture)
+        {
+            width = _camera.targetTexture.height,
+            height = _camera.targetTexture.width
+        };
+        _rotateRender.ApplyRotation(_camera.targetTexture, outputRT, flip: true);
 
-        Texture2D photo = new Texture2D(
-            (int) targetTextureRect.width, (int) targetTextureRect.height,
-            TextureFormat.RGB24, false);
-        photo.ReadPixels(targetTextureRect, 0, 0);
-
-        string dateTimeString = System.DateTime.Now.ToString("yyyy-MM-dd_T_HH-mm-ss");
-        string outputFileName = $"{dateTimeString}_{gameObject.name}.png";
-        string outputFilePath = Path.Combine(outputFolder, outputFileName);
-        Debug.Log($"Saving photo at: {outputFilePath}");
-        File.WriteAllBytes(outputFilePath, photo.EncodeToPNG());
+        SaveRenderToFile(outputRT);
 
         RenderTexture.active = oldActiveTexture;
+        DestroyImmediate(outputRT);        
     }
 
 
