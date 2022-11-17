@@ -131,11 +131,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1235b8c4fbb62346997cd87f3316866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outputFolder: C:\Academic\GT - MSCS\Sem III - Fall 2022\CS 8803 Sonification RnD
+    Studio\store\outputs
   offStateAttributes:
     clearFlags: 2
     backgroundColor: {r: 0, g: 0, b: 0, a: 0}
-    cullingMask: 0
+    cullingMask:
+      serializedVersion: 2
+      m_Bits: 0
   onStateAttributes:
     clearFlags: 0
     backgroundColor: {r: 0, g: 0, b: 0, a: 0}
-    cullingMask: 0
+    cullingMask:
+      serializedVersion: 2
+      m_Bits: 0

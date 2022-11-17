@@ -6,32 +6,20 @@ using UnityEngine.Events;
 public class AlvinController : MonoBehaviour
 {
     [System.Serializable]
-    public struct ComponentToggle<T>
+    public struct ActionBinding
     {
-        public T component;
-        public KeyCode toggleKey;
+        public KeyCode key;
+        public UnityEvent action;
     }
 
-    public ComponentToggle<Light>[] lightToggles;
-    public ComponentToggle<VehicleCamera>[] vehicleCameraToggles;
+    public ActionBinding[] alvinActionBindings;
 
     private void Update()
     {
-        foreach (var lightToggle in lightToggles)
+        foreach (var binding in alvinActionBindings)
         {
-            if (Input.GetKeyUp(lightToggle.toggleKey))
-                ToggleLight(lightToggle.component);
+            if (Input.GetKeyUp(binding.key))
+                binding.action.Invoke();
         }
-
-        foreach (var cameraToggle in vehicleCameraToggles)
-        {
-            if (Input.GetKeyUp(cameraToggle.toggleKey))
-                cameraToggle.component.Toggle();
-        }
-    }
-
-    private void ToggleLight(Light light)
-    {
-        light.enabled = !light.enabled;
     }
 }
