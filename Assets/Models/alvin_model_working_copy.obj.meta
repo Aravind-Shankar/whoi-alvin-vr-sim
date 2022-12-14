@@ -3,7 +3,162 @@ guid: f55e12077ac4a3343b35f79aa2f36925
 ModelImporter:
   serializedVersion: 20300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02___Default
+    second: {fileID: 2100000, guid: 331fa2256de48d644a05592f3478a032, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Buttons.001
+    second: {fileID: 2100000, guid: 37dbdef53fc03a24dbf3564dccff65a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Buttons.002
+    second: {fileID: 2100000, guid: a0503bc65c884f243a345fc0433c41db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Buttons.003
+    second: {fileID: 2100000, guid: 497dbed0292040748a2cc52433dfea92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Buttons.004
+    second: {fileID: 2100000, guid: f1d45de5aad35c547a8ce73779849d57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Control.001
+    second: {fileID: 2100000, guid: 8417902e4dae36a44b4b3c1def8c56af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Control.002
+    second: {fileID: 2100000, guid: 13b62668a9173cb4d8d21ab13c6d8166, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Control.003
+    second: {fileID: 2100000, guid: 197ada327f9230347b1d6de24a683822, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Control.004
+    second: {fileID: 2100000, guid: 2d9c827057954d84fa2a39f84a640800, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: b58cd9510a4d1524daa9afc722bff35a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 3a5e0d0437172a44296beb3dfc3aefb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: a3a9562559dd5d246886d3b3e923a85b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: d6d32e2bcaf571f42aa59ec87aef95c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.012
+    second: {fileID: 2100000, guid: f4e380be03ee0c44381df41b9e180755, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.013
+    second: {fileID: 2100000, guid: 03f63cd6ca21ac64498dbab2ceb88296, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.015
+    second: {fileID: 2100000, guid: b620a6cf0e6283d4581a216fb1b5b8f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.016
+    second: {fileID: 2100000, guid: 7de96cfc0ce1d934ea9374f5cd39d952, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wire
+    second: {fileID: 2100000, guid: 8a4f2ca6c401fd946a7b9b095bba413b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wire.001
+    second: {fileID: 2100000, guid: c693b6f718cb9204cac2d6f0f7ca77fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wire.002
+    second: {fileID: 2100000, guid: a3b64b67ae38d3a4e9dd284935d51661, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wire.003
+    second: {fileID: 2100000, guid: d15f5680d13d1c840ba395e492253c91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wire.004
+    second: {fileID: 2100000, guid: 0c73ebb112524e0468339e8c4aa62bac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wire.006
+    second: {fileID: 2100000, guid: c2ab854c93b3d254dabfa6aaf0ef41c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3
+    second: {fileID: 2100000, guid: a9abc83999106df4c80c7279d3791918, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3.002
+    second: {fileID: 2100000, guid: b693b4645450c014ebea227b78c31b5f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3.003
+    second: {fileID: 2100000, guid: dca1dca3aad35f047b296c4103fd190e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert3.005
+    second: {fileID: 2100000, guid: 671f85ddcfa2d8341ac35ac779347b87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: object1_auv.001
+    second: {fileID: 2100000, guid: a9086a933579c6542981ddef1449d9e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: object1_auv.003
+    second: {fileID: 2100000, guid: ef41657062c743645a41c9876b2cd3ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: object1_auv.004
+    second: {fileID: 2100000, guid: 6ff06958e1e626842873bb34e34dceb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire_000000000
+    second: {fileID: 2100000, guid: 278f2adb5374f6e4f8fd4cbe8c0959b6, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

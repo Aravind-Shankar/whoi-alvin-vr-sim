@@ -512,7 +512,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 30
+  field of view: 45
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1143,13 +1143,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseMass: 5286532
-  totalMass: 7552191.5
+  totalMass: 5286532
   dimensions: {x: 16.351492, y: 13.75586, z: 84.34974}
   useDefaultCenterOfMass: 0
-  centerOfMass: {x: -0.0043347464, y: -0.031094186, z: 0.044713885}
+  centerOfMass: {x: -0.000008165861, y: -0.00008106232, z: 0.00021827819}
   centerOfMassOffset: {x: 0, y: 0, z: 0}
   useDefaultInertia: 1
-  inertiaTensor: {x: 955862900, y: 896663000, z: 269089470}
+  inertiaTensor: {x: 64316224, y: 60351556, z: 18061128}
   inertiaScale: {x: 1, y: 1, z: 1}
   updateInterval: 1
 --- !u!114 &573129733
@@ -1503,6 +1503,11 @@ PrefabInstance:
     - target: {fileID: 7367676329473032497, guid: 9866f957bf7067540bbee5c04ede6257,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367676329473032498, guid: 9866f957bf7067540bbee5c04ede6257,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7367676329473032500, guid: 9866f957bf7067540bbee5c04ede6257,
