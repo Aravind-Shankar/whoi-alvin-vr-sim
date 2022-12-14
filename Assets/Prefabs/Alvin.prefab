@@ -23,9 +23,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20371298}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.10769231, y: -0.5076904, z: 0.6523077}
-  m_LocalScale: {x: 0.3076923, y: 0.30769232, z: 0.3076923}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1506869203}
   m_Father: {fileID: 5815597120168924068}
@@ -179,8 +179,8 @@ MonoBehaviour:
   defaultWaterNormal: {x: 0, y: 1, z: 0}
   defaultWaterFlow: {x: 0, y: 0, z: 0}
   calculateWaterHeights: 1
-  calculateWaterNormals: 1
-  calculateWaterFlows: 1
+  calculateWaterNormals: 0
+  calculateWaterFlows: 0
   fluidDensity: 1030
   buoyantForceCoefficient: 1
   slamForceCoefficient: 1
@@ -359,7 +359,7 @@ Transform:
   m_GameObject: {fileID: 1054872163}
   m_LocalRotation: {x: 0.08715579, y: -0, z: -0, w: 0.9961947}
   m_LocalPosition: {x: -0.13846152, y: -0.41538277, z: 0.892}
-  m_LocalScale: {x: 0.30769232, y: 0.30769232, z: 0.30769232}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1491676466}
   m_Father: {fileID: 5815597120168924068}
@@ -376,7 +376,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1054872166
 MonoBehaviour:
@@ -649,9 +649,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506869202}
-  m_LocalRotation: {x: -0.6716434, y: 0.1027806, z: -0.64744616, w: -0.34517357}
-  m_LocalPosition: {x: 10.248483, y: 4.772385, z: 2.1372495}
-  m_LocalScale: {x: 0.4808489, y: 0.4808488, z: 0.242722}
+  m_LocalRotation: {x: -0.01711002, y: 0.31675145, z: -0.93273723, w: -0.17139772}
+  m_LocalPosition: {x: -0.765308, y: 0.9607358, z: 3.8056874}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 20371299}
   m_RootOrder: 0
@@ -753,9 +753,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605328797}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.10769231, y: -0.5076904, z: 0.6523077}
-  m_LocalScale: {x: 0.3076923, y: 0.30769232, z: 0.3076923}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 66142769}
   m_Father: {fileID: 5815597120168924068}
@@ -919,9 +919,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5815597120168924071}
   serializedVersion: 2
-  m_Mass: 5286532
-  m_Drag: 0.15
-  m_AngularDrag: 0.5
+  m_Mass: 154000
+  m_Drag: 0.3
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -977,12 +977,12 @@ MonoBehaviour:
     isOn: 0
     minRPM: 300
     maxRPM: 800
-    maxThrust: 30000000
+    maxThrust: 100000
     spinUpTime: 2
     startingRPM: 300
     startDuration: 1.1
     stopDuration: 0.5
-    thrustPosition: {x: 0, y: 0, z: 0}
+    thrustPosition: {x: -1, y: -1.51, z: -3.07}
     thrustDirection: {x: 0, y: 0, z: 1}
     applyThrustWhenAboveWater: 0
     reverseThrustCoefficient: 1
@@ -1037,12 +1037,12 @@ MonoBehaviour:
     isOn: 0
     minRPM: 300
     maxRPM: 800
-    maxThrust: 30000000
+    maxThrust: 100000
     spinUpTime: 2
     startingRPM: 300
     startDuration: 1.1
     stopDuration: 0.5
-    thrustPosition: {x: 0, y: 0, z: 0}
+    thrustPosition: {x: 1, y: -1.51, z: -3.07}
     thrustDirection: {x: 0, y: 0, z: 1}
     applyThrustWhenAboveWater: 0
     reverseThrustCoefficient: 1
@@ -1106,7 +1106,7 @@ MonoBehaviour:
   dropAnchorWhenInactive: 0
   weighAnchorWhenActive: 0
   stabilizeRoll: 1
-  stabilizePitch: 1
+  stabilizePitch: 0
   maxStabilizationTorqueAngle: 20
   rollStabilizationMaxTorque: 100000000
   pitchStabilizationMaxTorque: 100000000
@@ -1142,14 +1142,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818177d2061f4558b66bee63b4cc78f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseMass: 5286532
-  totalMass: 5286532
+  baseMass: 154000
+  totalMass: 154000
   dimensions: {x: 16.351492, y: 13.75586, z: 84.34974}
   useDefaultCenterOfMass: 0
-  centerOfMass: {x: -0.000008165861, y: -0.00008106232, z: 0.00021827819}
+  centerOfMass: {x: -0.0000073348033, y: -0.00007915497, z: 0.00021292527}
   centerOfMassOffset: {x: 0, y: 0, z: 0}
   useDefaultInertia: 1
-  inertiaTensor: {x: 64316224, y: 60351556, z: 18061128}
+  inertiaTensor: {x: 1873582.2, y: 1758088.4, z: 526134.94}
   inertiaScale: {x: 1, y: 1, z: 1}
   updateInterval: 1
 --- !u!114 &573129733
@@ -1457,38 +1457,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7367676329473032497, guid: 9866f957bf7067540bbee5c04ede6257,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367676329473032497, guid: 9866f957bf7067540bbee5c04ede6257,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367676329473032497, guid: 9866f957bf7067540bbee5c04ede6257,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367676329473032497, guid: 9866f957bf7067540bbee5c04ede6257,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.300335
+      value: -0.38688108
       objectReference: {fileID: 0}
     - target: {fileID: 7367676329473032497, guid: 9866f957bf7067540bbee5c04ede6257,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.6637342
+      value: 0.61961246
       objectReference: {fileID: 0}
     - target: {fileID: 7367676329473032497, guid: 9866f957bf7067540bbee5c04ede6257,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.907362
+      value: 3.821642
       objectReference: {fileID: 0}
     - target: {fileID: 7367676329473032497, guid: 9866f957bf7067540bbee5c04ede6257,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6903456
+      value: 0.976296
       objectReference: {fileID: 0}
     - target: {fileID: 7367676329473032497, guid: 9866f957bf7067540bbee5c04ede6257,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.15304594
+      value: 0.21643963
       objectReference: {fileID: 0}
     - target: {fileID: 7367676329473032497, guid: 9866f957bf7067540bbee5c04ede6257,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6903456
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7367676329473032497, guid: 9866f957bf7067540bbee5c04ede6257,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.15304597
+      value: -0.00000002235174
       objectReference: {fileID: 0}
     - target: {fileID: 7367676329473032497, guid: 9866f957bf7067540bbee5c04ede6257,
         type: 3}
