@@ -64,17 +64,23 @@ public class VehicleCamera : MonoBehaviour
         RenderTexture.active = _camera.targetTexture;
         _camera.Render();
 
-        RenderTexture outputRT = new RenderTexture(_camera.targetTexture)
+        if (_rotateRender.enabled)
         {
-            width = _camera.targetTexture.height,
-            height = _camera.targetTexture.width
-        };
-        _rotateRender.ApplyRotation(_camera.targetTexture, outputRT, flip: true);
+            // mirror the rotation status of the image
+            RenderTexture outputRT = new RenderTexture(_camera.targetTexture)
+            {
+                width = _camera.targetTexture.height,
+                height = _camera.targetTexture.width
+            };
+            _rotateRender.ApplyRotation(_camera.targetTexture, outputRT, flip: true);
 
-        SaveRenderToFile(outputRT);
+            SaveRenderToFile(outputRT);
+            DestroyImmediate(outputRT);
+        }
+        else
+            SaveRenderToFile(_camera.targetTexture);
 
         RenderTexture.active = oldActiveTexture;
-        DestroyImmediate(outputRT);        
     }
 
 

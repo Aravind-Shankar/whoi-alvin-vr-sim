@@ -504,11 +504,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 66142771, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
       propertyPath: field of view
-      value: 120
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 66142771, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
+      propertyPath: far clip plane
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 296096279, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 573129730, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
+      propertyPath: stabilizePitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 573129730, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
+      propertyPath: engines.Array.data[0].maxThrust
+      value: 500000
+      objectReference: {fileID: 0}
+    - target: {fileID: 573129730, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
+      propertyPath: engines.Array.data[1].maxThrust
+      value: 500000
       objectReference: {fileID: 0}
     - target: {fileID: 573129733, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
       propertyPath: m_Enabled
@@ -519,8 +535,12 @@ PrefabInstance:
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 573129733, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
+      propertyPath: requestedDepth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 573129733, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
       propertyPath: depthInputSensitivity
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 573129733, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
       propertyPath: keepHorizontalSensitivity
@@ -537,6 +557,38 @@ PrefabInstance:
     - target: {fileID: 1054872164, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054872164, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054872164, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054872164, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054872164, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054872164, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054872164, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1491676465, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
+      propertyPath: field of view
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1491676465, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
+      propertyPath: far clip plane
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 1491676467, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
       propertyPath: _seafloorTransform
@@ -610,7 +662,7 @@ PrefabInstance:
     - target: {fileID: 5815597120168924068, guid: 048d33460bf6a034fa45d36f3dc0fc94,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 5815597120168924068, guid: 048d33460bf6a034fa45d36f3dc0fc94,
         type: 3}
@@ -676,6 +728,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7895988776181460942, guid: 048d33460bf6a034fa45d36f3dc0fc94,
+        type: 3}
+      propertyPath: m_Range
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 048d33460bf6a034fa45d36f3dc0fc94, type: 3}
