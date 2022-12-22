@@ -29,7 +29,7 @@ Transform:
   m_Children:
   - {fileID: 1506869203}
   m_Father: {fileID: 5815597120168924068}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &296096278
 GameObject:
@@ -62,7 +62,7 @@ Transform:
   - {fileID: 1824343516}
   - {fileID: 679365503}
   m_Father: {fileID: 5815597120168924068}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &679365502
 GameObject:
@@ -357,14 +357,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054872163}
-  m_LocalRotation: {x: 0.08715579, y: -0, z: -0, w: 0.9961947}
-  m_LocalPosition: {x: -0.13846152, y: -0.41538277, z: 0.892}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.13846152, y: -0.6, z: 0.892}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1491676466}
   m_Father: {fileID: 5815597120168924068}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1054872165
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -511,8 +511,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 45
+  far clip plane: 400
+  field of view: 35
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _version: 0
   _weight: 1.2
-  _depthFogFactorScale: 1.1
+  _depthFogFactorScale: 1.03
   _seafloorTransform: {fileID: 0}
   _primaryLightIntensityFalloff:
     serializedVersion: 2
@@ -667,10 +667,10 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0, g: 1, b: 0.12409544, a: 1}
-  m_Intensity: 2
-  m_Range: 75
-  m_SpotAngle: 120
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 3
+  m_Range: 200
+  m_SpotAngle: 150
   m_InnerSpotAngle: 6
   m_CookieSize: 10
   m_Shadows:
@@ -759,7 +759,7 @@ Transform:
   m_Children:
   - {fileID: 66142769}
   m_Father: {fileID: 5815597120168924068}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1684388090
 GameObject:
@@ -790,7 +790,7 @@ Transform:
   m_Children:
   - {fileID: 982249572}
   m_Father: {fileID: 5815597120168924068}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1824343515
 GameObject:
@@ -852,7 +852,7 @@ Transform:
   m_Children:
   - {fileID: 6286919225537196860}
   m_Father: {fileID: 5815597120168924068}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &573129736
 BoxCollider:
@@ -901,12 +901,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 2.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1684388091}
-  - {fileID: 296096279}
   - {fileID: 5920382471161798392}
   - {fileID: 7737531124304258113}
   - {fileID: 20371299}
+  - {fileID: 1684388091}
   - {fileID: 1605328798}
+  - {fileID: 296096279}
   - {fileID: 1054872164}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -977,7 +977,7 @@ MonoBehaviour:
     isOn: 0
     minRPM: 300
     maxRPM: 800
-    maxThrust: 100000
+    maxThrust: 500000
     spinUpTime: 2
     startingRPM: 300
     startDuration: 1.1
@@ -1037,7 +1037,7 @@ MonoBehaviour:
     isOn: 0
     minRPM: 300
     maxRPM: 800
-    maxThrust: 100000
+    maxThrust: 500000
     spinUpTime: 2
     startingRPM: 300
     startDuration: 1.1
@@ -1106,7 +1106,7 @@ MonoBehaviour:
   dropAnchorWhenInactive: 0
   weighAnchorWhenActive: 0
   stabilizeRoll: 1
-  stabilizePitch: 0
+  stabilizePitch: 1
   maxStabilizationTorqueAngle: 20
   rollStabilizationMaxTorque: 100000000
   pitchStabilizationMaxTorque: 100000000
@@ -1165,15 +1165,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ReferenceWaterObject: {fileID: 0}
-  requestedDepth: 10
+  requestedDepth: 20
   depthInputSensitivity: 5
   depthPID_Kp: 3
   depthPID_Ki: 0.3
   depthPID_Kd: 0.05
   maxMassFactor: 3
   keepHorizontal: 1
-  keepHorizontalSensitivity: 1
-  maxMassOffset: 0.4
+  keepHorizontalSensitivity: 0.5
+  maxMassOffset: 0.1
   depthInput: 0
 --- !u!114 &573129737
 MonoBehaviour:
@@ -1255,6 +1255,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5815597120168924068}
     m_Modifications:
+    - target: {fileID: 6346828025641119726, guid: 3d502f2b2864e67488c3966083c57f47,
+        type: 3}
+      propertyPath: m_Range
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6836853515734639712, guid: 3d502f2b2864e67488c3966083c57f47,
         type: 3}
       propertyPath: m_Name
@@ -1263,7 +1268,7 @@ PrefabInstance:
     - target: {fileID: 6836853515734639713, guid: 3d502f2b2864e67488c3966083c57f47,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6836853515734639713, guid: 3d502f2b2864e67488c3966083c57f47,
         type: 3}
@@ -1405,6 +1410,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2932215311151663441, guid: 1c4079094aa54a6408f186d07963f6b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -119629108710649348, guid: 1c4079094aa54a6408f186d07963f6b7,
         type: 3}
       propertyPath: m_IsActive
@@ -1524,6 +1534,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367676329473032499, guid: 9866f957bf7067540bbee5c04ede6257,
+        type: 3}
+      propertyPath: field of view
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367676329473032499, guid: 9866f957bf7067540bbee5c04ede6257,
+        type: 3}
+      propertyPath: far clip plane
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 7367676329473032500, guid: 9866f957bf7067540bbee5c04ede6257,
         type: 3}
